@@ -99,7 +99,7 @@ app.use((error, req, res, next) => {
 
 mongoose
   .connect(
-    'mongodb+srv://Mikel:5ztkka9nV7PvZ4xF@cluster0-yywit.mongodb.net/messages?retryWrites=true&w=majority'
+    process.env.MONGODBURI
   )
   .then(result => {
     app.listen(8080);
